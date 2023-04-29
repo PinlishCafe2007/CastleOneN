@@ -1,12 +1,23 @@
+//приветствие
+let name = prompt("Введите свое имя");
+alert(`
+Добро пожаловать ${name}!
+Для того чтобы начать игру нажмите "Закрыть"
+`)
+
+//кнопки
 let btnLeft = "";
 let btnRight = "";
 
+//текст
 let a = "";
 let b = "";
 
+//имена
 let peopleName = ["Предисловие", "Мысли", "Охранник", "Экскурсовод", "Король"];
 let [предисловие, мысли, охранник, экскурсовод, король] = peopleName;
 
+//истории
 let peopleHistory = [
 "Вы шпион, вас отправили на разведку в соседнее королевство времен XVI века, но вам нужно придумать, как пробраться в королевство.",
 "Вы очень долго шли, на дороге вам попадались большие и малые трудности, но спустя два дня вы, наконец, дошли…",
@@ -33,16 +44,19 @@ let [
 десятая, одиннадцатая, двенадцатая, тринадцатая, четырнадцатая, пятнадцатая,
 шестнадцатая, семнадцатая, восемнадцатая, девятнадцатая] = peopleHistory;
 
+//очистить текст
 function clearAll() {
   a = "";
   b = "";
 }
 
+//вывести текст
 function writing() {
   document.getElementById("name").innerHTML = a;
   document.getElementById("history").innerHTML = b;
 }
 
+//основной игровой процесс
 document.querySelector(".window").onclick = (event) => {
   if (a === "" && b === "") {
     a = предисловие;
@@ -244,13 +258,21 @@ document.querySelector(".window").onclick = (event) => {
     document.getElementById('one').style.visibility = 'hidden';
     document.getElementById('two').style.visibility = 'hidden';
     document.getElementById('three').style.visibility = 'hidden';
-    clearAll();
-    alert("Продолжение следует...");
+    document.getElementById('name').style.visibility = 'hidden';
+    document.getElementById('history').style.visibility = 'hidden';
+    alert(`
+    Поздравляю , ${name}, ты дошел до конца и открыл первую концовку!
+    Продолжение следует...
+    (Для повторного прохождения игры обновите страницу, приятной игры:)`);
   } else if (a === 21 && b === 21) {
     document.getElementById('one').style.visibility = 'hidden';
     document.getElementById('two').style.visibility = 'hidden';
     document.getElementById('three').style.visibility = 'hidden';
-    clearAll();
-    alert("Продолжение следует...");
+    document.getElementById('name').style.visibility = 'hidden';
+    document.getElementById('history').style.visibility = 'hidden';
+    alert(`
+    Поздравляю , ${name}, ты дошел до конца и открыл вторую концовку!
+    Продолжение следует...
+    (Для повторного прохождения игры обновите страницу, приятной игры:)`);
   }
 }
