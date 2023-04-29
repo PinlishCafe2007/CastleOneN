@@ -1,0 +1,91 @@
+html {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: url("../img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+img {
+  position: absolute;
+}
+#one {
+  visibility: hidden;
+  width: 50%;
+}
+#two {
+  visibility: hidden;
+  transform: scale(-1, 1);
+  width: 50%;
+}
+#three {
+  visibility: hidden;
+  width: 50%;
+}
+.window {
+  position: fixed;
+  border: 0 solid black;
+  background-color: black;
+  width: 95%;
+  height: 30%;
+  bottom: 6%;
+  margin-left: 2%;
+  margin-right: 2%;
+  opacity: 70%;
+  border-radius: 15px;
+  color: white;
+  padding: 0 40px 0 40px;
+}
+h2 {
+  font-size: 250%;
+  position: fixed;
+  left: 5%;
+  bottom: 25%;
+}
+#history {
+  font-size: 150%;
+  position: fixed;
+  left: 5%;
+  top: 73%;
+}
+.first {
+  position: absolute;
+  width: 9%;
+  height: 3%;
+  bottom: 9%;
+  left: 5%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: white;
+  visibility: hidden;
+}
+.second {
+  position: absolute;
+  width: 9%;
+  height: 3%;
+  bottom: 9%;
+  left: 14%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: white;
+  visibility: hidden;
+}
+#btnTxt1 {
+  position: absolute;
+  left: 1%;
+  bottom: -90%;
+  font-size: 180%;
+}
+#btnTxt2 {
+  position: absolute;
+  left: 1%;
+  bottom: -90%;
+  font-size: 180%;
+}
